@@ -26,6 +26,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import utilities.DBManager;
+import utilities.DBManager1;
 
 public class LabDataScrapperTor {
 	

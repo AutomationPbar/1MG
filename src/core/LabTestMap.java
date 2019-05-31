@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import utilities.DBManager;
+import utilities.DBManager1;
 
 public class LabTestMap {
 	
@@ -50,7 +50,7 @@ public class LabTestMap {
 	XSSFRow row = null;
 	XSSFWorkbook workbook;
 
-	DBManager dbm = new DBManager();
+	DBManager1 dbm = new DBManager1();
 	
 	String resultdata[] = new String[14];
 

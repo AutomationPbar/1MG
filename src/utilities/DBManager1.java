@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class DBManager {
+public class DBManager1 {
 
 	private Connection con = null;
 	private Statement stmt = null;
@@ -67,25 +67,6 @@ public class DBManager {
 
 		stmt.executeUpdate("INSERT INTO " + tableName + "(City, Lab, JSON, Remarks)  values ('" + city + "','" + lab
 				+ "','" + json + "','" + remarks + "');");
-		tear();
-
-	}
-	
-	
-	public void SetMgLabData(String docpname, String docpid, String mgid,String mgname, String url,String seourl,String includes,String provide,String testfor,String preparation,String provided,String overview,String result,String testincludes,String frequentlyb, String Remarks,String tableName)
-			throws SQLException {
-
-		try {
-			String datam = "('" + docpname + "','" + docpid + "','" + mgname + "','" + mgid + "','" +url+ "','"+seourl+ "','"+includes+ "','"+provide+ "','"+preparation+ "','"+overview+ "','"+result+ "','"+testincludes+ "','"+frequentlyb+ "');";
-
-			System.out.println("DataM " + datam);
-
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-
-		System.out.println("INSERT INTO " + tableName + "(TestNameDP, TestIDDP,TestNameMG,TestIDMG,SearchURL,SEOURL,Includes,Requirement,Sex,TestPreparation,ProvidedBy,Overview,InterpretingResults,TestsInclude,FrequentlyBookedTogether, Remarks)  values ('" + docpname + "','" + docpid + "','" + mgname + "','" + mgid + "','" +url+ "','"+seourl+ "','"+includes+ "','"+provide+ "','"+preparation+ "','"+overview+ "','"+result+ "','"+testincludes+ "','"+frequentlyb+ "','"+Remarks+"');");
-		stmt.executeUpdate("INSERT INTO " + tableName + "(TestNameDP, TestIDDP,TestNameMG,TestIDMG,SearchURL,SEOURL,Includes,Requirement,Sex,TestPreparation,ProvidedBy,Overview,InterpretingResults,TestsInclude,FrequentlyBookedTogether, Remarks)  values ('" + docpname + "','" + docpid + "','" + mgname + "','" + mgid + "','" +url+ "','"+seourl+ "','"+includes+ "','"+provide+ "','"+testfor+"','"+preparation+ "','"+provided+"','"+overview+ "','"+result+ "','"+testincludes+ "','"+frequentlyb+ "','"+Remarks+"');");
 		tear();
 
 	}

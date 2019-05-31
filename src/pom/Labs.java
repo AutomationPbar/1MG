@@ -62,21 +62,21 @@ public static WebElement firsttest(WebDriver driver){
 	
 	public static  WebElement overview(WebDriver driver){
 		
-		WebElement sm =driver.findElement(By.id("Overview"));
+		WebElement sm =driver.findElement(By.xpath("//*[@id='Overview']/div[2]"));
 		
 		return sm;
 		}
 		
 	public static  WebElement interpretingresult(WebDriver driver){
 		
-		WebElement sm =driver.findElement(By.id("Interpreting Results"));
+		WebElement sm =driver.findElement(By.xpath("//*[@id='Interpreting Results']/div[2]"));
 		
 		return sm;
 		}
 	
 	public static  WebElement testsincluded(WebDriver driver){
 		
-		WebElement sm =driver.findElement(By.id("Tests Included"));
+		WebElement sm =driver.findElement(By.xpath("//*[@id='Tests Included']/div[2]"));
 		
 		return sm;
 		}
@@ -95,4 +95,18 @@ public static WebElement firsttest(WebDriver driver){
 		
 		return sm;
 		}
+	
+	public static  WebElement selectlab(WebDriver driver){
+		
+		WebElement sm =driver.findElement(By.xpath("//*[@id='body-container']/div/div/div[3]/div/div/div[1]/div/div[2]/div[1]/div/div/div[1]/a/div/span"));
+		
+		return sm;
+		}
+
+	public static  WebElement includes(WebDriver driver){
+	
+	WebElement sm =driver.findElement(By.xpath("//*[@id='Tests Included']/div[1]/h2/span"));
+	
+	return sm;
+	}
 }
